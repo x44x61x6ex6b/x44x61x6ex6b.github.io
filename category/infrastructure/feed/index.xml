@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Infrastructure &#8211; \x44\x61\x6e\x6b</title>
+	<atom:link href="/category/infrastructure/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Dank adventures in security</description>
+	<lastBuildDate>Wed, 27 Jul 2022 05:25:36 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>Cheatsheet &#8211; Internal Infrastructure Pentesting</title>
+		<link>/2021/07/19/cheatsheet-internal-infrastructure-pentesting/</link>
+					<comments>/2021/07/19/cheatsheet-internal-infrastructure-pentesting/#respond</comments>
+		
+		<dc:creator><![CDATA[Dank]]></dc:creator>
+		<pubDate>Mon, 19 Jul 2021 10:20:27 +0000</pubDate>
+				<category><![CDATA[Cheat Sheet]]></category>
+		<category><![CDATA[Infrastructure]]></category>
+		<category><![CDATA[cheatsheet]]></category>
+		<category><![CDATA[infrastructure]]></category>
+		<guid isPermaLink="false">/blog/?p=57</guid>
+
+					<description><![CDATA[A living cheatsheet of commands and tips i've encountered during my day to day which are good enough to share :)]]></description>
+										<content:encoded><![CDATA[
+<p class="has-large-font-size"><strong>Unauthenticated Vectors:</strong></p>
+
+
+
+<p>Password Spraying:</p>
+
+
+
+<ul><li>https://book.hacktricks.xyz/windows/active-directory-methodology/password-spraying</li><li>https://github.com/Greenwolf/Spray</li><li>MSF: use auxiliary/scanner/smb/smb_login</li><li>CrackMapExec: crackmapexec cmd &lt;targetfile&gt; -u user -p pass -d domain</li></ul>
+
+
+
+<p>Relaying Credentials with ntlmrelayx:</p>
+
+
+
+<ul><li>https://blog.fox-it.com/2017/05/09/relaying-credentials-everywhere-with-ntlmrelayx/</li></ul>
+
+
+
+<p class="has-large-font-size"><strong>Authenticated Vectors:</strong></p>
+
+
+
+<p>Start CMD with secondary user credentials:</p>
+
+
+
+<ul><li>Local: runas /netonly /user:&lt;username&gt; cmd.exe</li><li>Domain: runas /netonly /user:&lt;domain&gt;\&lt;username&gt; cmd.exe</li></ul>
+
+
+
+<p>Log into System:</p>
+
+
+
+<ul><li>winrs -r:&lt;computername> cmd.exe</li><li>Enter-PSSession -ComputerName &lt;computername></li></ul>
+
+
+
+<p>Enable PowerShell Remoting</p>
+
+
+
+<ul><li>Enable: Enable-PSRemoting –force</li><li>Check WinRM Running: Get-WmiObject &#8211;<strong>Class</strong> win32_service | Where-Object {$_.name -like &#8220;WinRM&#8221;}</li><li>Set  all remote hosts to trusted: Set-Item WSMan:localhost\client\trustedhosts -value *<ul><li>Verify Configuration: Get-Item WSMan:\localhost\Client\TrustedHosts</li></ul></li></ul>
+
+
+
+<p class="has-large-font-size"><strong>Windows Activities:</strong></p>
+
+
+
+<p>See: /index.php/2021/07/19/cheatsheet-microsoft-windows/</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2021/07/19/cheatsheet-internal-infrastructure-pentesting/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

